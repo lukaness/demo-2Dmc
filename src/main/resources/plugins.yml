@@ -1,5 +1,5 @@
 name: SideScroller2D
-main: com.lukaness.2dmc.demo.SideScroller2D
+main: com.lukaness.SideScroller2D
 version: 1.0.0
-api-version: "1.21"
+api-version: "1.20"
 description: Locks players to 2D side-scroller movement, forces 3rd person, and makes players appear 2D using a head-mounted item.
