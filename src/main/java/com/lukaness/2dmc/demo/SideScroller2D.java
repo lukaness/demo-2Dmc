@@ -1,4 +1,4 @@
-package com.lukaness.2dmc.demo
+package com.lukaness
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
