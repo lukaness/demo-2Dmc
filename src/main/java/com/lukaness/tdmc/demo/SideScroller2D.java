@@ -1,22 +1,23 @@
 package com.lukaness.tdmc.demo;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Listener;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
-import java.util.HashMap;
-import java.util.Map;
 
 public class SideScroller2D extends JavaPlugin implements Listener {
-    private static final float SIDE_VIEW_YAW = 90f;
+    private static final float SIDE_VIEW_YAW = 0f;
     private Map<Player, ArmorStand> playerModels = new HashMap<>();
 
     @Override
@@ -62,7 +63,7 @@ public class SideScroller2D extends JavaPlugin implements Listener {
         if (to == null)
             return;
         to.setYaw(SIDE_VIEW_YAW);
-        to.setPitch(0);
+        to.setPitch(90);
         to.setZ(from.getZ()); // restrict to 2D plane
         e.setTo(to);
     }
