@@ -17,7 +17,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
 public class SideScroller2D extends JavaPlugin implements Listener {
-    private static final float SIDE_VIEW_YAW = 0f;
+    private static final float SIDE_VIEW_YAW = -180f;
     private Map<Player, ArmorStand> playerModels = new HashMap<>();
 
     @Override
@@ -63,7 +63,7 @@ public class SideScroller2D extends JavaPlugin implements Listener {
         if (to == null)
             return;
         to.setYaw(SIDE_VIEW_YAW);
-        to.setPitch(90);
+        to.setPitch(0);
         to.setZ(from.getZ()); // restrict to 2D plane
         e.setTo(to);
     }
