@@ -62,8 +62,8 @@ public class SideScroller2D extends JavaPlugin implements Listener {
         Location to = e.getTo();
         if (to == null)
             return;
-        to.setYaw(SIDE_VIEW_YAW);
-        to.setPitch(0);
+        to.setYaw(180f); // fixed side view
+        to.setPitch(0f);
         to.setZ(from.getZ()); // restrict to 2D plane
         e.setTo(to);
     }
